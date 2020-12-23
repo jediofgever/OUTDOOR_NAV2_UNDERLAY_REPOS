@@ -12,45 +12,35 @@ Deb installation is strongly recomended. Detailed steps to install ROS2 Foxy can
 
 A few helper packages we use fro gui and installation;
 
-```bash
-sudo apt-get install python3-vcstool
-sudo apt-get install xdotool
-```
+.. code-block:: bash
+
+   sudo apt-get install python3-vcstool
+   sudo apt-get install xdotool
 
 Finally get the project repository and dependecy repositories and build; 
 
-```bash
-source /opt/ros/foxy/setup.bash
-mkdir -p ~/colcon_ws/src
-cd ~/colcon_ws
-wget https://raw.githubusercontent.com/jediofgever/OUTDOOR_NAV2_UNDERLAY_REPOS/main/underlay.repos
-vcs import src < underlay.repos
-cd ~/colcon_ws
-rosdep install -y -r -q --from-paths src --ignore-src --rosdistro foxy
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-``` 
+.. code-block:: bash
+
+   source /opt/ros/foxy/setup.bash
+   mkdir -p ~/colcon_ws/src
+   cd ~/colcon_ws
+   wget https://raw.githubusercontent.com/jediofgever/OUTDOOR_NAV2_UNDERLAY_REPOS/main/underlay.repos
+   vcs import src < underlay.repos
+   cd ~/colcon_ws
+   rosdep install -y -r -q --from-paths src --ignore-src --rosdistro foxy
+   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+
 You will be asked to enter your github credentials, enter them correctly, since this repo is private at the moment. 
 `rosdep` might take quite long to install all required depenedencies , so please wait for that command to finish. 
 
 You can update dependencies that are build from source such as `navigation2` or `teb_local_planner`
 with this convient commands; 
 
-```bash
-cd ~/colcon_ws
-vcs import src < underlay.repos
-vcs pull src
-```
+.. code-block:: bash
+
+   cd ~/colcon_ws
+   vcs import src < underlay.repos
+   vcs pull src
 
 We need the source build of some dependencies(e.g `navigation2`), sometimes we need to add/modify functionalities, overall it gives more control for the development. For future we might remove all source built dependencies, but for now the existing 3 better stay as it is since some of them are not avaliable in from debian installations. 
-
-
-.. toctree::
-   :hidden:
-
-   roadmap_milestones/index.rst
-   getting_started/index.rst
-   running_project/index.rst
-   gui_interaction/index.rst
-   botanbot/index.rst
-   slam/index.rst
-
