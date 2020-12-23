@@ -20,7 +20,6 @@ This branch(foxy) is aiming for ROS2 Foxy distro, there is also `main` branch wh
    roadmap_milestones/index.rst
    getting_started/index.rst
    running_project/index.rst
-   gui_interaction/index.rst
    botanbot/index.rst
    slam/index.rst
 
