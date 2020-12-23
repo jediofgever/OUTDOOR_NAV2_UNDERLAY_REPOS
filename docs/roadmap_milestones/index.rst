@@ -3,24 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to OUTDOOR_NAV2's documentation!
+Roadmap and Milestones
 ========================================
 
-A project to develop/adapt a navigation system for outdoor robotics particularly aiming for use-cases in agriculture. 
+This section is aimed to keep track of development of major features.
 
+- [x] Create an ackermann model robot under Gazebo and decorate with required sensor suite for outdoor navigation. 
+- [x] Add different Gazebo worlds(farming like, city like, wild hilly world, empty world with simple shapes in it)  
+- [x] Add a GUI for interaction with Robot, jogging robot manually, starting shutting down nodes  and launch files, selecting the worlds to start.
+- [x] Configure `robot_localization` to obtain map->odom->base_link chain
+- [x] Configure `teb_local_planner` for ackermann robot, as DWB does not work for ackermann
+- [x] Test with `navigation2`, set simple goals and get in goals wtih all functionalities enabled; planner, controller, recovery, obstacle avoidance
+- [x] Add GPS Waypoint following feature
+- [x] Test GPS Waypoint Following feature in a city like envoirment, [Youtube video](https://www.youtube.com/watch?v=DQGfRRn1DBQ&t=13s) 
+- [X] Test GPS waypoint following in tomato field [Youtube Video](https://www.youtube.com/watch?v=afxouvL1JAk), this is not pure GPS waypoint following 
+- [ ] Add GPS Waypoint following to `navigation2`, Here [nav2_gps_waypoint_follower](https://github.com/ros-planning/navigation2/pull/2111), Progress about 95% 
+- [ ] Add tutorial to `navigation2`, on how to make use of `nav2_gps_waypoint_follower`, PR IS OPEN [HERE](https://github.com/ros-planning/navigation2_tutorials/pull/16), Progress about 95%,
+- [ ] Consider adding 3D AMCL or another 3D SLAM to help `robot_localization`, see [here](https://answers.ros.org/question/218137/using-robot_localization-with-amcl/)  
+- [ ] Can [grid_map](https://github.com/ANYbotics/grid_map/tree/ros2) be beneficial to here? 
+- [ ] Test GPS waypoint following on real hardware
+- [ ] Add perception pipeline, at least describe a perception module. 
+- [ ] Test multi-robot simulation. more than 1 botanbot doing some task collabratively.
 
-This branch(foxy) is aiming for ROS2 Foxy distro, there is also `main` branch which keeps up with the latest commits from `ros2::main` and `navigation2::main`. This branch is more stable so we aim to keep major feature developments in this branch since it is more stable. 
-
-`main` branch unstable because of constant updates from whole ROS2 ecosystem. But it is required to be there, from time to time we may need to get involved with guys at `navigation2` e.g submitting PRs or getting/pulling latest features from navigation2. Current branch is recomended to try/test/develop. 
-
-
-.. toctree::
-   :hidden:
-
-   roadmap_milestones/index.rst
-   getting_started/index.rst
-   running_project/index.rst
-   gui_interaction/index.rst
-   botanbot/index.rst
-   slam/index.rst
 
