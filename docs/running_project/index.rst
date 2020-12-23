@@ -3,24 +3,50 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to OUTDOOR_NAV2's documentation!
+Running Project
 ========================================
 
-A project to develop/adapt a navigation system for outdoor robotics particularly aiming for use-cases in agriculture. 
+The project has a RQT GUI plugin that lets you to interact with robot. To start with this plugin make sure in previous sections you built project 
+successfully. 
 
+* source your colcon_ws and start the project with;
 
-This branch(foxy) is aiming for ROS2 Foxy distro, there is also `main` branch which keeps up with the latest commits from `ros2::main` and `navigation2::main`. This branch is more stable so we aim to keep major feature developments in this branch since it is more stable. 
+.. code-block:: bash
 
-`main` branch unstable because of constant updates from whole ROS2 ecosystem. But it is required to be there, from time to time we may need to get involved with guys at `navigation2` e.g submitting PRs or getting/pulling latest features from navigation2. Current branch is recomended to try/test/develop. 
+   source install/setup.bash
+   rqt --force-discover
 
+.. image:: /images/gui_1.png
+   :width: 700px
+   :align: center
+   :alt: rqt landing screen
 
-.. toctree::
-   :hidden:
+The rqt window should open as above. You should now find our plugin under; 
 
-   roadmap_milestones/index.rst
-   getting_started/index.rst
-   running_project/index.rst
-   gui_interaction/index.rst
-   botanbot/index.rst
-   slam/index.rst
+`Plugins -> Visualization -> Control Plugin. `
 
+Click on Control Plugin and you would be able to see; 
+
+.. image:: /images/gui_2.png
+   :width: 700px
+   :align: center
+   :alt: rqt landing screen
+
+Interact with GUI
+========================================   
+
+Select a world that you would like to run te robot in then Click on Start Gazebo Stand Alone, to start botanbot simulation. 
+Note that the Gazebo worlds we use are large, so your computer needs to have an dedicated GPU,it takes apprx. 10 seconds for simulation to start in my case.
+After a while you should see Gazebo starting. 
+
+You may not see the Botanbot at first, At left side of Gazebo simulation, find the `models -> botanbot`
+right click and then `follow` botanbot model. This should put the focus onto botanbot. 
+
+You can also click on start RVIZ and you should be able to see sensor data and robot model in rviz ; 
+
+.. image:: /images/rviz_1.png
+   :width: 700px
+   :align: center
+   :alt: rqt landing screen
+
+You can jog botanbot with RQT plugin, use `L/R` for giving angular speed and `D/R` for  linear speed. 
