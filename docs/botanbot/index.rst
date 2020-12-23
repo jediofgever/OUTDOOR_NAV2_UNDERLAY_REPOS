@@ -31,7 +31,7 @@ Sensor support for Botanbot
 |  RealSense D435 IR2   CAMERA  | /camera/infra2/image_raw | sensor_msgs::msg::Image          |  1                    |
 |                               |                          |                                  |                       |
 +-------------------------------+--------------------------+----------------------------------+-----------------------+
-|  GPS                          | /gps/fix               | sensor_msgs::msg::NavSatFix      |  30                   |
+|  GPS                          | /gps/fix                 | sensor_msgs::msg::NavSatFix      |  30                   |
 |                               |                          |                                  |                       |
 +-------------------------------+--------------------------+----------------------------------+-----------------------+
 |  IMU                          | /imu/data                | sensor_msgs::msg::IMU            |  1                    |
@@ -39,7 +39,7 @@ Sensor support for Botanbot
 +-------------------------------+--------------------------+----------------------------------+-----------------------+
 
 
-### Botanbot navigation in farming world
+* Botanbot navigation in farming world
 
 .. image:: /images/botanbot_2.png
    :width: 700px
@@ -47,7 +47,7 @@ Sensor support for Botanbot
    :alt: rqt landing screen
 
 
-### Botanbot in Hilly Gazebo world
+* Botanbot in Hilly Gazebo world
 
 .. image:: /images/botanbot_0.jpg
    :width: 700px
