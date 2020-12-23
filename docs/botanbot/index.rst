@@ -12,16 +12,31 @@ It is simulated under Gazebo with all required essential sensors in order to do 
 Sensor support for Botanbot
 ========================================
 
-
-| Sensor type | Topic Name(s) | Message Type | Update Rate |
-| :---: | :---: | :---: | :---: |
-| LIDAR | /velodyne_points | sensor_msgs::msg::PointCloud2 | 30 |
-| RealSense D435 COLOR CAMERA | /camera/color/image_raw | sensor_msgs::msg::Image | 30 |
-| RealSense D435 DEPTH CAMERA | /camera/aligned_depth_to_color/image_raw | sensor_msgs::msg::Image | 30 |
-| RealSense D435 IR1 CAMERA | /camera/infra1/image_raw | sensor_msgs::msg::Image | 1 |
-| RealSense D435 IR2 CAMERA | /camera/infra2/image_raw | sensor_msgs::msg::Image | 1 |
-| GPS | /gps/fix | sensor_msgs::msg::NavSatFix | 30 |
-| IMU | /imu | sensor_msgs::msg::Imu | 30 |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
+|      Sensor Type              |       Topic              |       MSG TYPE                   | Update Rate           |
++===============================+==========================+==================================+=======================+
+|  LIDAR                        | /velodyne_points         | sensor_msgs::msg::PointCloud2    | 30                    |
+|                               |                          |                                  |                       |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
+|  RealSense D435 COLOR CAMERA  | /camera/color/image_raw  | sensor_msgs::msg::Image          |  30                   |
+|                               |                          |                                  |                       |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
+|  RealSense D435 DEPTH CAMERA  | /camera/                 | sensor_msgs::msg::Image          |  30                   |
+|                               | aligned_depth_to_color/  |                                  |                       |
+|                               | image_raw                |                                  |                       |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
+|  RealSense D435 IR1   CAMERA  | /camera/infra1/image_raw | sensor_msgs::msg::Image          |  1                    |
+|                               |                          |                                  |                       |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
+|  RealSense D435 IR2   CAMERA  | /camera/infra2/image_raw | sensor_msgs::msg::Image          |  1                    |
+|                               |                          |                                  |                       |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
+|  GPS                          | /gps/fix               | sensor_msgs::msg::NavSatFix      |  30                   |
+|                               |                          |                                  |                       |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
+|  IMU                          | /imu/data                | sensor_msgs::msg::IMU            |  1                    |
+|                               |                          |                                  |                       |
++-------------------------------+--------------------------+----------------------------------+-----------------------+
 
 
 ### Botanbot navigation in farming world
@@ -34,12 +49,12 @@ Sensor support for Botanbot
 
 ### Botanbot in Hilly Gazebo world
 
-.. image:: /images/botanbot_0.png
+.. image:: /images/botanbot_0.jpg
    :width: 700px
    :align: center
    :alt: rqt landing screen
 
-.. image:: /images/botanbot_1.png
+.. image:: /images/botanbot_1.jpg
    :width: 700px
    :align: center
    :alt: rqt landing screen
