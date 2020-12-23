@@ -16,7 +16,7 @@ in that case a global prebuilt map of envoirnment might be necesarry(e.g a `.pcd
 
 ------------ 
 
-1. Related to Google Cartographer 3D SLAM
+ ** 1. Related to Google Cartographer 3D SLAM **
 
 Unfourtunately Cartographer has not been ported to ROS2 completely ATM. 
 We can still create maps and visualize results, the `botanbot_cartogrpaher` is correctly configured and tested. 
@@ -52,7 +52,7 @@ Wait for cartogrpaher to finish and do optimizations on the map.
 
 ------------ 
 
-2. Related to LIDAR SLAM ROS2 3D PACKAGE
+** 2. Related to LIDAR SLAM ROS2 3D PACKAGE **
 
 As second(but primary for now) SLAM package we have [lidarslam_ros2](https://github.com/jediofgever/lidarslam_ros2) package. 
 The package is able to generate nice maps(in city like envoirnments) based on GICP/NDT. 
@@ -87,7 +87,7 @@ Here are a few example maps crreated when botanbot was taking a tour to gas stat
    :align: center
    :alt: rqt landing screen
 
-3. Related to OpenVSLAM
+** 3. Related to OpenVSLAM **
 
 OpenVSLAM[1] is a open ource Visual SLAM framework. It support several types of camera models in order to achieve SLAM only based on a camera image. 
 In agri-fields the repetitive/featuresless , texturless envoirnments leads to poor results on LIDAR based SLAM. or instance Neither with Cartographer or LIDAR SLAM package 
