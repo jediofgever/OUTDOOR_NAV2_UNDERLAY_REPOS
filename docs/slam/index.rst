@@ -121,6 +121,7 @@ Most of openvslam dependencies will be already exstent in your Ubuntu system but
 yaml-cpp;
 
 .. code-block:: bash
+
    sudo apt-get install libyaml-cpp-dev
 
 Some of above deps will need a source build. Which can be done as ; 
@@ -143,6 +144,7 @@ DBoW2;
 g2o; 
 
 .. code-block:: bash
+
    cd ~/
    git clone https://github.com/RainerKuemmerle/g2o.git
    cd g2o
@@ -203,6 +205,7 @@ After all of this `botanbot_openvslam` should compile fine.
 In order to build a map with provided server package do following; 
 
 .. code-block:: bash
+
    ros2 launch botanbot_openvslam openvslam_mapping.launch.py output_map_filename:=${HOME}/test_map.msg
 
 Jog the robot with rqt gui plugin and visualize the map with pangolin viewer. A map with extension of `.msg` will be dumped 
@@ -221,9 +224,15 @@ make sure to cd ino `botanbot_openvslam/scripts`
    :align: center
    :alt: rqt landing screen
 
+.. image:: /images/openvslam_1.png
+   :width: 700px
+   :align: center
+   :alt: rqt landing screen
+
 You can convert .msg to .pcd with provided script; 
 
 .. code-block:: bash
+
    python3 convert_msg_to_pcd.py map.msg out.pcd
 
 
