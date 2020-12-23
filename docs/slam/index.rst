@@ -79,4 +79,4 @@ Here are a few example maps crreated when botanbot was taking a tour to gas stat
    :align: center
    :alt: rqt landing screen
 
-3/. Related to OpenVSLAM
+3. Related to OpenVSLAM
