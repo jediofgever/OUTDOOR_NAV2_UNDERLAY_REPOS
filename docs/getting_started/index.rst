@@ -28,14 +28,19 @@ Finally get the project repository and dependecy repositories and build;
    vcs import src < underlay.repos
    cd ~/colcon_ws
    rosdep install -y -r -q --from-paths src --ignore-src --rosdistro foxy
-   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-
+   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-skip botanbot_openvslam
 
 You will be asked to enter your github credentials, enter them correctly, since this repo is private at the moment. 
 `rosdep` might take quite long to install all required depenedencies , so please wait for that command to finish. 
 
 You can update dependencies that are build from source such as `navigation2` or `teb_local_planner`
 with this convient commands; 
+
+.. note::
+   Pay attention that we have disabled the build of botanbot_openvslam. The package has quite some 
+   amount of deps. If you like to use please refer to SLAM section , there you will find instructions
+   to install botanbot_openvslam deps. After that you ca remove `--packages-skip botanbot_openvslam` part from 
+   colcon build command.
 
 .. code-block:: bash
 
