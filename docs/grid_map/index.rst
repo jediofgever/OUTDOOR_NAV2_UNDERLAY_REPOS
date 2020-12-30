@@ -23,7 +23,7 @@ Assuming that we have recorded bag file that contains point cloud and imu(option
    :align: center
    :alt: rqt landing screen
 
-.. image:: /images/grid_map_0.png
+.. image:: /images/grid_map_1.png
    :width: 700px
    :align: center
    :alt: rqt landing screen
