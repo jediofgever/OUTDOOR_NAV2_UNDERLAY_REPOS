@@ -208,6 +208,15 @@ In order to build a map with provided server package do following;
 
    ros2 launch botanbot_openvslam openvslam_mapping.launch.py output_map_filename:=${HOME}/test_map.msg
 
+Currently mono and RGBD cameras are suppoorted. RGBD is recomended and in the deafult settings we use ATM.
+Mono images cannot be correctly scaled to real world unlike RGBD. See the mapping.launch.py under `botanbot_openvslam` and make sure 
+the camera topics are corrctly remapped. 
+
+.. note:: text
+   Visual SLAM has difficulties dealing with pure rotations. So the robot needs at least some translation as well when taking sharp 
+   turns. 
+
+
 Jog the robot with rqt gui plugin and visualize the map with pangolin viewer. A map with extension of `.msg` will be dumped 
 to the path you passed to output_map_filename. The scripts provided in `botanbot_openvslam` are able to visualize 
 and convert this .msg to .pcd extension. 
@@ -219,12 +228,12 @@ make sure to cd ino `botanbot_openvslam/scripts`
 
    python3 visualize_openvslam_map.py map.msg
 
-.. image:: /images/openvslam_0.png
+.. image:: ../images/openvslam_0.png
    :width: 700px
    :align: center
    :alt: rqt landing screen
 
-.. image:: /images/openvslam_1.png
+.. image:: ../images/openvslam_1.png
    :width: 700px
    :align: center
    :alt: rqt landing screen
@@ -244,3 +253,5 @@ Lastly Localization can be perfromed in a pre build map ;
 where the argument is pull path to prebuild map in .msg format.
 
 [1](https://github.com/xdspacelab/openvslam)
+
+
