@@ -22,4 +22,6 @@ This branch(foxy) is aiming for ROS2 Foxy distro, there is also `main` branch wh
    running_project/index.rst
    botanbot/index.rst
    slam/index.rst
+   grid_map/index.rst
+
 
