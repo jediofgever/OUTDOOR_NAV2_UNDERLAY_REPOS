@@ -72,17 +72,17 @@ Note; if the sensor topic names are different then you need to recorrect them in
 execute all commands in seperate terminals. 
 Here are a few example maps crreated when botanbot was taking a tour to gas station and retruning back. 
 
-.. image:: /images/slam_0.png
+.. image:: ../images/slam_0.png
    :width: 700px
    :align: center
    :alt: rqt landing screen
 
-.. image:: /images/slam_1.png
+.. image:: ../images/slam_1.png
    :width: 700px
    :align: center
    :alt: rqt landing screen
 
-.. image:: /images/slam_2.png
+.. image:: ../images/slam_2.png
    :width: 700px
    :align: center
    :alt: rqt landing screen
@@ -94,7 +94,7 @@ In agri-fields the repetitive/featuresless , texturless envoirnments leads to po
 
 We could build a reasonable map. However openvslam perfromed quite ok in the tomato_field world. 
 
-.. image:: /images/openvslam_0.png
+.. image:: ../images/openvslam_0.png
    :width: 700px
    :align: center
    :alt: rqt landing screen
