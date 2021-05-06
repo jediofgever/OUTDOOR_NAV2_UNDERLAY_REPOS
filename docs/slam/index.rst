@@ -37,7 +37,7 @@ In order to record a bag file this the required topics, do the following;
 
 A bag file will be created. Cartogrpaher expects that you define the rigid body 
 transforms between sensor links and robot body frame(base_link). 
-This transforms are defined in `botanbot_cartographer/urdf`. 
+This transforms are defined in `archived_botanbot_cartographer/urdf`. 
 You might need to modify translation and roation between velodyne sensor and imu sensor 
 for different setup. A strict calibration might not be necesarry between IMU and LIDAR. 
 
@@ -46,7 +46,7 @@ After we have the bag file and configuration ready, we do the following to build
 
 .. code-block:: bash
 
-   ros2 launch botanbot_cartographer cartographer.launch.py use_sim_time:=true bag_file:=${HOME}/rosbag2_2020_12_18-10_25_37/rosbag2_2020_12_18-10_25_37_0.db3
+   ros2 launch archived_botanbot_cartographer cartographer.launch.py use_sim_time:=true bag_file:=${HOME}/rosbag2_2020_12_18-10_25_37/rosbag2_2020_12_18-10_25_37_0.db3
 
 Wait for cartogrpaher to finish and do optimizations on the map. 
 

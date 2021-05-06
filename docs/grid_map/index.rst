@@ -5,13 +5,13 @@
 
 Grid Map
 ========================================
-`botanbot_grid_map` is a package that reads a prebuilt map in .pcd format and publishes grid_map qith several layers(elevation,traversability).
+`archived_botanbot_grid_map` is a package that reads a prebuilt map in .pcd format and publishes grid_map qith several layers(elevation,traversability).
 The maps can be built with any SLAM algorithm, at the default we have openvslam though. 
-There are several important parameters in configuration files of `botanbot_grid_map`. 
+There are several important parameters in configuration files of `archived_botanbot_grid_map`. 
 
 .. code-block:: yaml
 
-   botanbot_grid_map_node:
+   archived_botanbot_grid_map_node:
    ros__parameters:
       resolution: 0.15
       pcd_file_full_path: /home/ros2-foxy/f.pcd
@@ -45,7 +45,7 @@ parameters leads to following grid maps depicted in pictures.
 
 .. code-block:: bash
 
-   ros2 launch botanbot_grid_map botanbot_grid_map.launch.py 
+   ros2 launch archived_botanbot_grid_map archived_botanbot_grid_map.launch.py 
 
 .. image:: ../images/grid_map_0.png
    :width: 700px
